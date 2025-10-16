@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en"> <!--setting the language-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280"> <!-- setting the viewport width -->
+    <title>Mini-Golf & Supplies</title> <!-- title  -->
+	<meta name="author" content="Bradley Larkin"><!-- Gives credit to the author -->
+	<link rel="author" href="https://github.com/UnavoidableArrowgance?tab=repositories">
+	<link rel="license" href="https://creativecommons.org/licenses/by/4.0/">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"> <!-- https://www.walmart.com/ip/Callaway-Strata-Boom-Golf-Balls-Multi-Color-24-Pack/733938494 -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon"><!-- linking the favicon that appears for the tab  -->
+    <link rel="stylesheet" href="styles.css"> <!-- linking the style sheet -->
+    <script src="script.js" async></script> <!--linking the javascript-->
+</head>
+<body>
+    <header>
+        <section id="home"> <!-- for anchor links -->
+            <h1>Mini-Golf & Supplies</h1> <!-- page title -->
+        </section>
+        <nav>
+            <ul><!-- links for anchor tags, taking to points on this page -->
+                <li><a href="#home">Home</a></li> 
+                <li><a href="#products">Products</a></li>
+                <li><a href="#game">Game</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <button id="theme-toggle">&#x2600;&#xfe0f;</button> <!-- Sun symbol for different color modes toggled -->
+    </header>
+
+
+    <main>
+        <img id="header-image" src="images/mini-golf-course.jpg" alt="Image off mini golf supplies"><!--https://minigolfcreations.com/how-to-build-mini-golf-course-business/-->
+        <section id="company-description"> <!-- telling about what the company is for -->
+            <h2>Mini-Golf and supplies</h2>
+            <p>We are a company that provides quality products to our customers in order to fulfill your company or individual wants. We pride ourselves on no unsatisfied customers for our entire journey as a company</p>
+        </section>
+        <section id="products"> <!-- section for looking through our products -->
+            <h2>Our Products</h2> 
+            <div id="product-controls"> <!-- buttons for switching displays-->
+                <button class="product-btn" id="putter-display-button">Putter</button>
+                <button class="product-btn" id="ball-display-button">Golf Ball Set</button>
+                <button class="product-btn" id="obstacle-display-button">Mini-Golf Obstacle Kit</button>
+            </div>
+            <div id="product-display"> <!-- products with text to instruct users until they interact with the buttons above -->
+                <h3 id="product-name">Please select a Product above!</h3>
+                <img id="product-image" src="images/all-products.jpg" alt="Image off mini golf supplies"><!--https://www.agsgolfandsports.com/portable-modular-mini-golf/-->
+                <p id="product-description">We have a selection of products to choose from and we always guarantee satisfaction with your order</p> <!-- to help the space feel less empty before selection -->
+            </div>
+        </section>
+
+        <section id="game"> <!-- users put in a number, it is displayed and compared to where they win or lose-->
+            <h2>Guess the Number Game!</h2>
+            <p>Match a randomly generated number, then you win!</p>
+            <p>Guess a whole number from 1 through 10</p>
+            <input type="number" id="guess-input" min="1" max="10">
+            <button id="guess-submit">Submit Guess</button>
+            <p id = "display-user-number">Your Number: </p> <!-- display user's number -->
+            <p id = "display-random-number">Random Number: </p> <!-- display the random number -->
+            <p id="guess-result"></p> <!-- displays after button is pressed -->
+        </section>
+        <section id="contact"> <!-- contact form -->
+            <h2>Contact Us</h2>
+            <form id="contact-form">  <!--  all have title, text box, and error display space for giving feedback to the user, right or wrong -->
+                <label for="first-name">First Name<span> *</span></label>
+                <input type="text" id="first-name" placeholder="First">
+                <span id="first-name-error" class="input-error"></span>
+                <label for="last-name">Last Name<span> *</span></label>
+                <input type="text" id="last-name" placeholder="Last">
+                <span id="last-name-error" class="input-error"></span>
+                <label for="phone">Phone Number<span></span></label> <!-- the * to symbolize required appears depending on the preference choice -->
+                <input type="tel" id="phone" placeholder="(555) 555-5555">
+                <span id="phone-error" class="input-error"></span>
+                <label for="email">Email Address<span></span></label>  <!-- the * to symbolize required appears depending on the preference choice -->
+                <input type="email" id="email" placeholder="example@gmail.com">
+                <span id="email-error" class="input-error"></span>
+                <fieldset id="pref-contact">
+                    <legend>Contact Preference<span> *</span></legend>
+                    <label><input type="radio" name="contact-pref" value="phone"> Phone</label>
+                    <label><input type="radio" name="contact-pref" value="email"> Email</label>
+                </fieldset>
+                <span id="pref-contact-error" class="input-error"></span>
+                <label for="comments">Comments<span> *</span></label>
+                <textarea id="comments" placeholder="Please tell us why you are reaching out in a few words"></textarea>
+                <span id="comments-error" class="input-error"></span>
+                <button type="submit">Submit</button>
+            </form>
+            <div id="form-result"></div> <!-- displays either needing more info or saying response was accepted -->
+        </section>
+    </main>
+    <footer>
+        <p>Mini-Golf & Supplies &copy; 2025</p> <!-- brief for legal -->
+    </footer>
+</body>
+</html>
